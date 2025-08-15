@@ -1,5 +1,4 @@
 [phases.setup]
-[phases.setup]
 nixPkgs = [
   "(php.withExtensions (pe: pe.enabled ++ []))", # PHP with all enabled extensions
   "nginx",                      # Nginx web server
