@@ -1,14 +1,5 @@
 [phases.setup]
-nixPkgs = [
-  "php82",                      # PHP runtime
-  "php82Extensions.mbstring",   # Required by Laravel
-  "php82Extensions.pdo_mysql",  # MySQL driver
-  "php82Extensions.tokenizer",  # Laravel dependency
-  "composer",                   # PHP dependency manager
-  "nodejs_20",                   # Node.js runtime
-  "python311Packages.supervisor" # Process manager
-]
-
+nixPkgs = ["...", "python311Packages.supervisor"]
 
 [phases.build]
 cmds = [
