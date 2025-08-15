@@ -1,5 +1,17 @@
 [phases.setup]
-nixPkgs = ["...", "python311Packages.supervisor"]
+[phases.setup]
+nixPkgs = [
+  "(php.withExtensions (pe: pe.enabled ++ []))", # PHP with all enabled extensions
+  "nginx",                      # Nginx web server
+  "libmysqlclient",             # MySQL client library
+  "phpPackages.composer",       # Composer
+  "nodejs_20",                  # Node.js v20
+  "npm-9_x",                    # npm 9.x
+  "python311Packages.supervisor", # Python 3.11 Supervisor
+  "curl",                       # Curl
+  "wget"                        # Wget
+]
+
 
 [phases.build]
 cmds = [
