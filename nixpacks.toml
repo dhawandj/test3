@@ -1,5 +1,6 @@
 [phases.setup]
-nixPkgs = [ "...","nodejs_20", "python311Packages.supervisor"]
+nixPkgs = ["nodejs_20","composer","python311Packages.supervisor"]
+
 
 [phases.build]
 cmds = [
